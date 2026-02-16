@@ -10,15 +10,10 @@ public class Book
 {
     // The fields.
     private String author;
-    
     private String title;
-    
     private int pages;
-    
     private String refNumber;
-    
     private int borrowed;
-    
     private boolean courseText;
     
     /**
@@ -27,7 +22,7 @@ public class Book
      * Answer to 2.86: This book class of object is not immutable. Their 
      * field's can be edited and changed as needed.
      */
-    public Book(String bookAuthor, String bookTitle, int bookPages,String refNumber, int borrowed, boolean isCourseText)
+    public Book(String bookAuthor, String bookTitle, int bookPages, boolean isCourseText)
     {
         author = bookAuthor;
         title = bookTitle;
@@ -110,7 +105,7 @@ public class Book
      */
     public void setRefNumber(String ref)
     {
-        if (ref.length() == 3)
+        if (ref.length() >= 3)
         {
             refNumber = ref;
         }
